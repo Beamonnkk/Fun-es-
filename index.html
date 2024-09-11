@@ -1,18 +1,117 @@
 <!DOCTYPE html>
-<html lang="PT-Br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Você sobreviveria a um apocalipse zumbi?</title>
+    <title>Quiz: Quem Você Seria em The Walking Dead?</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="caixa-principal">
-        <h1>Você sobreviveria a um apocalipse zumbi?</h1>
-        <div class="caixa-perguntas"></div>
-        <div class="caixa-alternativas"></div>
-        <div class="caixa-resultado"></div>
-            <p class="texto-resultado"></p>
+    <div class="quiz-container">
+        <h1>Quem Você Seria em The Walking Dead?</h1>
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. Como você reage em uma situação de crise?</p>
+                <label><input type="radio" name="q1" value="A"> Eu assumo a liderança e tomo decisões rápidas.</label><br>
+                <label><input type="radio" name="q1" value="B"> Eu procuro ajudar os outros e fico ao seu lado.</label><br>
+                <label><input type="radio" name="q1" value="C"> Eu tento encontrar uma solução pacífica e evitar conflitos.</label><br>
+                <label><input type="radio" name="q1" value="D"> Eu observo e analiso a situação antes de agir.</label>
+            </div>
+            <div class="question">
+                <p>2. Qual é a sua abordagem em relação a novos aliados?</p>
+                <label><input type="radio" name="q2" value="A"> Confio neles imediatamente e os considero parte do grupo.</label><br>
+                <label><input type="radio" name="q2" value="B"> Sou cauteloso e preciso observar suas ações antes de confiar.</label><br>
+                <label><input type="radio" name="q2" value="C"> Prefiro manter distância até que eu tenha certeza de sua lealdade.</label><br>
+                <label><input type="radio" name="q2" value="D"> Analiso suas intenções e o impacto que podem ter no grupo.</label>
+            </div>
+            <div class="question">
+                <p>3. O que você valoriza mais em um grupo de sobreviventes?</p>
+                <label><input type="radio" name="q3" value="A"> Liderança forte e habilidade em combate.</label><br>
+                <label><input type="radio" name="q3" value="B"> Solidariedade e apoio mútuo.</label><br>
+                <label><input type="radio" name="q3" value="C"> Inteligência e capacidade de resolver problemas.</label><br>
+                <label><input type="radio" name="q3" value="D"> Criatividade e adaptabilidade.</label>
+            </div>
+            <div class="question">
+                <p>4. Como você se sente em relação ao uso de força para resolver problemas?</p>
+                <label><input type="radio" name="q4" value="A"> Às vezes é necessário, desde que seja para proteger o grupo.</label><br>
+                <label><input type="radio" name="q4" value="B"> Prefiro evitar violência sempre que possível.</label><br>
+                <label><input type="radio" name="q4" value="C"> A violência deve ser uma última opção, mas pode ser inevitável.</label><br>
+                <label><input type="radio" name="q4" value="D"> Uso força apenas como último recurso e busco alternativas pacíficas.</label>
+            </div>
+            <div class="question">
+                <p>5. Como você lida com a perda de alguém próximo?</p>
+                <label><input type="radio" name="q5" value="A"> Fico profundamente abalado, mas sigo em frente com uma missão clara.</label><br>
+                <label><input type="radio" name="q5" value="B"> Busco apoio emocional e tento manter a memória da pessoa viva.</label><br>
+                <label><input type="radio" name="q5" value="C"> Reflito sobre a perda e tento entender o que posso aprender com isso.</label><br>
+                <label><input type="radio" name="q5" value="D"> Foco em ações práticas para lidar com a situação e proteger os outros.</label>
+            </div>
+            <div class="question">
+                <p>6. Qual é sua prioridade quando se trata de segurança?</p>
+                <label><input type="radio" name="q6" value="A"> Garantir que todos no grupo tenham o que precisam para se proteger.</label><br>
+                <label><input type="radio" name="q6" value="B"> Manter um ambiente seguro e estável para todos.</label><br>
+                <label><input type="radio" name="q6" value="C"> Proteger os mais vulneráveis e encontrar maneiras de evitar confrontos.</label><br>
+                <label><input type="radio" name="q6" value="D"> Implementar estratégias defensivas e manter a vigilância constante.</label>
+            </div>
+            <div class="question">
+                <p>7. Como você se comporta em uma situação de negociação?</p>
+                <label><input type="radio" name="q7" value="A"> Faço concessões para garantir um acordo rápido e benéfico.</label><br>
+                <label><input type="radio" name="q7" value="B"> Procuro entender o ponto de vista da outra parte e encontrar um meio-termo.</label><br>
+                <label><input type="radio" name="q7" value="C"> Mantenho firmeza e tento persuadir a outra parte com argumentos sólidos.</label><br>
+                <label><input type="radio" name="q7" value="D"> Avalio as condições e procuro uma solução que maximize os benefícios para ambos os lados.</label>
+            </div>
+            <div class="question">
+                <p>8. O que você faz quando encontra um novo recurso?</p>
+                <label><input type="radio" name="q8" value="A"> Avalio rapidamente o valor e decido se deve ser compartilhado ou guardado.</label><br>
+                <label><input type="radio" name="q8" value="B"> Considero como o recurso pode beneficiar o grupo e compartilho com todos.</label><br>
+                <label><input type="radio" name="q8" value="C"> Guardar para uso futuro e planejo como maximizar seu benefício.</label><br>
+                <label><input type="radio" name="q8" value="D"> Uso imediatamente o recurso para resolver um problema urgente.</label>
+            </div>
+            <div class="question">
+                <p>9. Como você enfrenta um desafio inesperado?</p>
+                <label><input type="radio" name="q9" value="A"> Encaro de frente e busco uma solução imediata.</label><br>
+                <label><input type="radio" name="q9" value="B"> Analiso o problema com calma e procuro soluções colaborativas.</label><br>
+                <label><input type="radio" name="q9" value="C"> Avalio os riscos e benefícios antes de tomar uma decisão.</label><br>
+                <label><input type="radio" name="q9" value="D"> Procuro a melhor forma de adaptar a situação ao meu favor.</label>
+            </div>
+            <div class="question">
+                <p>10. Qual é sua reação ao encontrar um desconhecido perigoso?</p>
+                <label><input type="radio" name="q10" value="A"> Confronto a pessoa e a avalio imediatamente.</label><br>
+                <label><input type="radio" name="q10" value="B"> Tento manter a calma e analisar a situação antes de agir.</label><br>
+                <label><input type="radio" name="q10" value="C"> Evito qualquer confronto direto e procuro uma maneira de sair da situação.</label><br>
+                <label><input type="radio" name="q10" value="D"> Busco entender suas intenções e tomo precauções para garantir a segurança.</label>
+            </div>
+            <div class="question">
+                <p>11. Qual é o seu estilo de liderança?</p>
+                <label><input type="radio" name="q11" value="A"> Autoritário e decisivo, garantindo que todos sigam as diretrizes.</label><br>
+                <label><input type="radio" name="q11" value="B"> Participativo e empático, ouvindo as opiniões de todos.</label><br>
+                <label><input type="radio" name="q11" value="C"> Estratégico e reflexivo, guiando o grupo com base na situação.</label><br>
+                <label><input type="radio" name="q11" value="D"> Motivador e inspirador, buscando engajar todos no objetivo comum.</label>
+            </div>
+            <div class="question">
+                <p>12. Como você vê o futuro da humanidade?</p>
+                <label><input type="radio" name="q12" value="A"> Acredito que é possível reconstruir e criar uma nova ordem.</label><br>
+                <label><input type="radio" name="q12" value="B"> Espero que possamos encontrar uma forma de viver em paz e harmonia.</label><br>
+                <label><input type="radio" name="q12" value="C"> Penso que devemos focar em sobreviver e adaptar-se às novas realidades.</label><br>
+                <label><input type="radio" name="q12" value="D"> Creio que precisamos ser resilientes e lutar para manter a esperança viva.</label>
+            </div>
+            <div class="question">
+                <p>13. Como você lida com conflitos dentro do grupo?</p>
+                <label><input type="radio" name="q13" value="A"> Intervenho rapidamente para resolver o problema e restaurar a ordem.</label><br>
+                <label><input type="radio" name="q13" value="B"> Facilito a comunicação entre as partes e busco uma solução pacífica.</label><br>
+                <label><input type="radio" name="q13" value="C"> Tento entender as causas do conflito e encontrar uma resolução que beneficie todos.</label><br>
+                <label><input type="radio" name="q13" value="D"> Estabeleço regras claras para prevenir e resolver conflitos.</label>
+            </div>
+            <div class="question">
+                <p>14. Qual é sua abordagem para enfrentar uma ameaça externa?</p>
+                <label><input type="radio" name="q14" value="A"> Ataco a ameaça de forma proativa e decisiva.</label><br>
+                <label><input type="radio" name="q14" value="B"> Avalio a ameaça e trabalho em conjunto com o grupo para desenvolver uma estratégia.</label><br>
+                <label><input type="radio" name="q14" value="C"> Prefiro adotar uma abordagem defensiva e proteger o grupo.</label><br>
+                <label><input type="radio" name="q14" value="D"> Procuro usar astúcia e táticas para neutralizar a ameaça.</label>
+            </div>
+            <button type="button" onclick="calculateResult()">Descubra!</button>
+        </form>
+        <div id="result" class="result"></div>
     </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

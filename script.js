@@ -1,61 +1,46 @@
-const caixaPrincipal = document.querySelector(".caixa-principal");
-const caixaPerguntas = document.querySelector(".caixa-perguntas");
-const caixaAlternativas = document.querySelector(".caixa-alternativas");
-const caixaResultado = document.querySelector(".caixa-resultado");
-const textoResultado = document.querySelector(".texto-resultado");
+function calculateResult() {
+    const answers = {
+        A: 0,
+        B: 0,
+        C: 0,
+        D: 0
+    };
 
-const perguntas = [
-    {
-        enunciado: "Você tem um plano de evacuação para sua casa?",
-        alternativas: [
-            "Sim",
-            "Não",
-            "Estou trabalhando nisso"
-        ]
-    },
-    {
-        enunciado: "Qual é o seu nível de conhecimento sobre primeiros socorros?",
-        alternativas: [
-            "Avançado",
-            "Intermediário",
-            "Básico",
-            "Nenhum"
-        ]
+    // Get all the answers
+    const formData = new FormData(document.getElementById('quiz-form'));
+
+    for (const [key, value] of formData.entries()) {
+        if (answers.hasOwnProperty(value)) {
+            answers[value]++;
+        }
     }
-]; 
-const perguntas = [
-    {
-        enunciado: "Você está em um supermercado e ouve zumbis se aproximando. O que você faz?",
-        alternativas: [
-            " Pegar o máximo de suprimentos possível e sair correndo sem se preocupar com o barulho.",
-            "Buscar uma saída segura e deixar uma pista falsa para os zumbis se distraírem.",
-            " Tentar se esconder em um dos corredores até que os zumbis saiam.",
-            " Fazer uma barricada Tentar se esconder em um dos corredores até que os zumbis saiam. improvisada e esperar os zumbis saírem antes de continuar."
-        ]
-    },
-    {
-        enunciado: "Você encontra um grupo de sobreviventes que parece amigável, mas não tem certeza de suas intenções. O que você faz?",
-        alternativas: [
-            "Se aproximar imediatamente e oferecer ajuda, sem pensar duas vezes.",
-            "Observar de longe e procurar sinais de que são confiáveis antes de se aproximar.",
-            "Evitar o grupo e seguir seu próprio caminho para não correr riscos.",
-            "Tentar formar uma aliança sem garantias, pois a força em números é importante."
-        ]
+
+    // Determine which character has the highest score
+    const resultElement = document.getElementById('result');
+    const maxAnswer = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+
+    let resultText = '';
+
+    switch (maxAnswer) {
+        case 'A':
+            resultText = 'Você seria Rick Grimes! Líder natural e alguém que toma decisões rápidas para proteger o grupo.';
+            break;
+        case 'B':
+            resultText = 'Você seria Daryl Dixon! Leal e protetor dos seus amigos, sempre pronto para ajudar.';
+            break;
+        case 'C':
+            resultText = 'Você seria Michonne! Inteligente e estratégica, valoriza a solução pacífica dos conflitos.';
+            break;
+        case 'D':
+            resultText = 'Você seria Maggie Rhee! Resiliente e forte, com uma habilidade notável de lidar com as dificuldades e manter a esperança viva.';
+            break;
+        case 'E':
+            resultText = 'Você seria Glenn Rhee! Corajoso e engenhoso, sempre encontrando maneiras de superar os desafios.';
+            break;
+        case 'F':
+            resultText = 'Você seria Carl Grimes! Jovem, corajoso e com uma visão de mundo única, lutando para proteger aqueles que ama.';
+            break;
     }
-]; 
-const perguntas = [
-    {
-        enunciado: "Pergunta 1",
-        alternativas: [
-            "Alternativa 1",
-            "Alternativa 2"
-        ]
-    },
-    {
-        enunciado: "Pergunta 2",
-        alternativas: [
-            "Alternativa 1",
-            "Alternativa 2"
-        ]
-    }
-]; 
+
+    resultElement.textContent = resultText;
+}
