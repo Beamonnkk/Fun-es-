@@ -1,83 +1,74 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #a79687;
-    margin: 0;
-    padding: 0;
+    background-color: #161512;
+    color: #ecf0f1;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
 }
 
-.quiz-container {
-    width: 100%;
-    max-width: 800px;
-    background-color: hsl(23, 13%, 53%);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(114, 40, 40, 0.1);
-    padding: 20px;
-    margin: 20px;
+.container {
+    background-color: #1f1d19;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
 }
 
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #3b302a;
-    text-align: center;
+    color: #922013;
 }
 
-.question {
-    margin-bottom: 20px;
+.intro {
+    margin: 20px 0;
 }
 
-.question p {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #4d3d36;
+.question-container {
+    margin: 15px 0;
 }
 
 label {
     display: block;
     margin: 10px 0;
-    font-size: 1em;
-    color: hsl(0, 0%, 100%);
-    position: relative;
-    padding-left: 30px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #a73f2c;
+    transition: background-color 0.3s;
+}
+
+label:hover {
+    background-color: #740f08;
 }
 
 input[type="radio"] {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    accent-color: #141312;
+    margin-right: 10px;
 }
 
 button {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: #bda996;
-    color: white;
+    background-color: #e74c3c;
     border: none;
-    border-radius: 8px;
-    font-size: 1.1em;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #49413a;
+    background-color: #c0392b;
+    transform: scale(1.05);
 }
 
 .result {
     margin-top: 20px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1.2em;
-    color: #41382c;
-}
+    font-size: 1.5em;
+    color: #f7f1f1;
+}                     
